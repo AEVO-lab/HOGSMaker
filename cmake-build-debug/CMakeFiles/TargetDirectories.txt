@@ -1,3 +1,3 @@
-W:/Users/Manuel/Dropbox/projects/code/PACClustering/cmake-build-debug/CMakeFiles/edit_cache.dir
-W:/Users/Manuel/Dropbox/projects/code/PACClustering/cmake-build-debug/CMakeFiles/PACC.dir
-W:/Users/Manuel/Dropbox/projects/code/PACClustering/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+W:/Users/Manuel/Documents/GitHub/HOGSMaker/HOGSMaker/cmake-build-debug/CMakeFiles/HOGSMaker.dir
+W:/Users/Manuel/Documents/GitHub/HOGSMaker/HOGSMaker/cmake-build-debug/CMakeFiles/edit_cache.dir
+W:/Users/Manuel/Documents/GitHub/HOGSMaker/HOGSMaker/cmake-build-debug/CMakeFiles/rebuild_cache.dir

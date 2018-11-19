@@ -4,14 +4,17 @@
 CMakeFiles/PACC.dir/CCExactSolver.cpp.obj: ../CCExactSolver.cpp
 CMakeFiles/PACC.dir/CCExactSolver.cpp.obj: ../CCExactSolver.h
 CMakeFiles/PACC.dir/CCExactSolver.cpp.obj: ../Graph.h
-CMakeFiles/PACC.dir/CCExactSolver.cpp.obj: ../util.h
+CMakeFiles/PACC.dir/CCExactSolver.cpp.obj: ../TreeSource/div/define.h
+CMakeFiles/PACC.dir/CCExactSolver.cpp.obj: ../TreeSource/div/util.h
 
 CMakeFiles/PACC.dir/Graph.cpp.obj: ../Graph.cpp
 CMakeFiles/PACC.dir/Graph.cpp.obj: ../Graph.h
-CMakeFiles/PACC.dir/Graph.cpp.obj: ../util.h
+CMakeFiles/PACC.dir/Graph.cpp.obj: ../TreeSource/div/define.h
+CMakeFiles/PACC.dir/Graph.cpp.obj: ../TreeSource/div/util.h
 
 CMakeFiles/PACC.dir/main.cpp.obj: ../CCExactSolver.h
 CMakeFiles/PACC.dir/main.cpp.obj: ../Graph.h
+CMakeFiles/PACC.dir/main.cpp.obj: ../TreeSource/div/define.h
+CMakeFiles/PACC.dir/main.cpp.obj: ../TreeSource/div/util.h
 CMakeFiles/PACC.dir/main.cpp.obj: ../main.cpp
-CMakeFiles/PACC.dir/main.cpp.obj: ../util.h
 

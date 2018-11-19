@@ -58,45 +58,45 @@ RM = "W:\Program Files\JetBrains\CLion 2018.2.6\bin\cmake\win\bin\cmake.exe" -E 
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = W:\Users\Manuel\Dropbox\projects\code\PACClustering
+CMAKE_SOURCE_DIR = W:\Users\Manuel\Documents\GitHub\HOGSMaker\HOGSMaker
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = W:\Users\Manuel\Dropbox\projects\code\PACClustering\cmake-build-debug
+CMAKE_BINARY_DIR = W:\Users\Manuel\Documents\GitHub\HOGSMaker\HOGSMaker\cmake-build-debug
 
 #=============================================================================
-# Target rules for target CMakeFiles/PACC.dir
+# Target rules for target CMakeFiles/HOGSMaker.dir
 
 # All Build rule for target.
-CMakeFiles/PACC.dir/all:
-	$(MAKE) -f CMakeFiles\PACC.dir\build.make CMakeFiles/PACC.dir/depend
-	$(MAKE) -f CMakeFiles\PACC.dir\build.make CMakeFiles/PACC.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=W:\Users\Manuel\Dropbox\projects\code\PACClustering\cmake-build-debug\CMakeFiles --progress-num=1,2,3,4 "Built target PACC"
-.PHONY : CMakeFiles/PACC.dir/all
+CMakeFiles/HOGSMaker.dir/all:
+	$(MAKE) -f CMakeFiles\HOGSMaker.dir\build.make CMakeFiles/HOGSMaker.dir/depend
+	$(MAKE) -f CMakeFiles\HOGSMaker.dir\build.make CMakeFiles/HOGSMaker.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=W:\Users\Manuel\Documents\GitHub\HOGSMaker\HOGSMaker\cmake-build-debug\CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9 "Built target HOGSMaker"
+.PHONY : CMakeFiles/HOGSMaker.dir/all
 
 # Include target in all.
-all: CMakeFiles/PACC.dir/all
+all: CMakeFiles/HOGSMaker.dir/all
 
 .PHONY : all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/PACC.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start W:\Users\Manuel\Dropbox\projects\code\PACClustering\cmake-build-debug\CMakeFiles 4
-	$(MAKE) -f CMakeFiles\Makefile2 CMakeFiles/PACC.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start W:\Users\Manuel\Dropbox\projects\code\PACClustering\cmake-build-debug\CMakeFiles 0
-.PHONY : CMakeFiles/PACC.dir/rule
+CMakeFiles/HOGSMaker.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start W:\Users\Manuel\Documents\GitHub\HOGSMaker\HOGSMaker\cmake-build-debug\CMakeFiles 9
+	$(MAKE) -f CMakeFiles\Makefile2 CMakeFiles/HOGSMaker.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start W:\Users\Manuel\Documents\GitHub\HOGSMaker\HOGSMaker\cmake-build-debug\CMakeFiles 0
+.PHONY : CMakeFiles/HOGSMaker.dir/rule
 
 # Convenience name for target.
-PACC: CMakeFiles/PACC.dir/rule
+HOGSMaker: CMakeFiles/HOGSMaker.dir/rule
 
-.PHONY : PACC
-
-# clean rule for target.
-CMakeFiles/PACC.dir/clean:
-	$(MAKE) -f CMakeFiles\PACC.dir\build.make CMakeFiles/PACC.dir/clean
-.PHONY : CMakeFiles/PACC.dir/clean
+.PHONY : HOGSMaker
 
 # clean rule for target.
-clean: CMakeFiles/PACC.dir/clean
+CMakeFiles/HOGSMaker.dir/clean:
+	$(MAKE) -f CMakeFiles\HOGSMaker.dir\build.make CMakeFiles/HOGSMaker.dir/clean
+.PHONY : CMakeFiles/HOGSMaker.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/HOGSMaker.dir/clean
 
 .PHONY : clean
 

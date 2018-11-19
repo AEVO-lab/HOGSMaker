@@ -6,11 +6,15 @@
 
 #IncludeRegexTransform: 
 
-W:/Users/Manuel/Dropbox/projects/code/PACClustering/CCExactSolver.h
+W:/Users/Manuel/Documents/GitHub/HOGSMaker/HOGSMaker/CCExactSolver.cpp
+CCExactSolver.h
+W:/Users/Manuel/Documents/GitHub/HOGSMaker/HOGSMaker/CCExactSolver.h
+
+W:/Users/Manuel/Documents/GitHub/HOGSMaker/HOGSMaker/CCExactSolver.h
 iostream
 -
 Graph.h
-W:/Users/Manuel/Dropbox/projects/code/PACClustering/Graph.h
+W:/Users/Manuel/Documents/GitHub/HOGSMaker/HOGSMaker/Graph.h
 cmath
 -
 vector
@@ -20,34 +24,34 @@ bitset
 unordered_map
 -
 
-W:/Users/Manuel/Dropbox/projects/code/PACClustering/Graph.h
+W:/Users/Manuel/Documents/GitHub/HOGSMaker/HOGSMaker/Graph.cpp
+Graph.h
+W:/Users/Manuel/Documents/GitHub/HOGSMaker/HOGSMaker/Graph.h
+
+W:/Users/Manuel/Documents/GitHub/HOGSMaker/HOGSMaker/Graph.h
 map
 -
 set
 -
 random
 -
-util.h
-W:/Users/Manuel/Dropbox/projects/code/PACClustering/util.h
+TreeSource/div/util.h
+W:/Users/Manuel/Documents/GitHub/HOGSMaker/HOGSMaker/TreeSource/div/util.h
 
-W:/Users/Manuel/Dropbox/projects/code/PACClustering/main.cpp
-iostream
--
-map
--
-Graph.h
-W:/Users/Manuel/Dropbox/projects/code/PACClustering/Graph.h
-CCExactSolver.h
-W:/Users/Manuel/Dropbox/projects/code/PACClustering/CCExactSolver.h
+W:/Users/Manuel/Documents/GitHub/HOGSMaker/HOGSMaker/TreeSource/div/define.h
 
-W:/Users/Manuel/Dropbox/projects/code/PACClustering/util.h
+W:/Users/Manuel/Documents/GitHub/HOGSMaker/HOGSMaker/TreeSource/div/util.h
 string
 -
 iostream
 -
 fstream
 -
+define.h
+W:/Users/Manuel/Documents/GitHub/HOGSMaker/HOGSMaker/TreeSource/div/define.h
 algorithm
+-
+set
 -
 cctype
 -
@@ -57,4 +61,14 @@ sstream
 -
 vector
 -
+
+W:/Users/Manuel/Documents/GitHub/HOGSMaker/HOGSMaker/main.cpp
+iostream
+-
+map
+-
+Graph.h
+W:/Users/Manuel/Documents/GitHub/HOGSMaker/HOGSMaker/Graph.h
+CCExactSolver.h
+W:/Users/Manuel/Documents/GitHub/HOGSMaker/HOGSMaker/CCExactSolver.h
 

@@ -47,10 +47,10 @@ RM = "W:\Program Files\JetBrains\CLion 2018.2.6\bin\cmake\win\bin\cmake.exe" -E 
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = W:\Users\Manuel\Dropbox\projects\code\PACClustering
+CMAKE_SOURCE_DIR = W:\Users\Manuel\Documents\GitHub\HOGSMaker\HOGSMaker
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = W:\Users\Manuel\Dropbox\projects\code\PACClustering\cmake-build-debug
+CMAKE_BINARY_DIR = W:\Users\Manuel\Documents\GitHub\HOGSMaker\HOGSMaker\cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -79,9 +79,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start W:\Users\Manuel\Dropbox\projects\code\PACClustering\cmake-build-debug\CMakeFiles W:\Users\Manuel\Dropbox\projects\code\PACClustering\cmake-build-debug\CMakeFiles\progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start W:\Users\Manuel\Documents\GitHub\HOGSMaker\HOGSMaker\cmake-build-debug\CMakeFiles W:\Users\Manuel\Documents\GitHub\HOGSMaker\HOGSMaker\cmake-build-debug\CMakeFiles\progress.marks
 	$(MAKE) -f CMakeFiles\Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start W:\Users\Manuel\Dropbox\projects\code\PACClustering\cmake-build-debug\CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start W:\Users\Manuel\Documents\GitHub\HOGSMaker\HOGSMaker\cmake-build-debug\CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -110,17 +110,17 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named PACC
+# Target rules for targets named HOGSMaker
 
 # Build rule for target.
-PACC: cmake_check_build_system
-	$(MAKE) -f CMakeFiles\Makefile2 PACC
-.PHONY : PACC
+HOGSMaker: cmake_check_build_system
+	$(MAKE) -f CMakeFiles\Makefile2 HOGSMaker
+.PHONY : HOGSMaker
 
 # fast build rule for target.
-PACC/fast:
-	$(MAKE) -f CMakeFiles\PACC.dir\build.make CMakeFiles/PACC.dir/build
-.PHONY : PACC/fast
+HOGSMaker/fast:
+	$(MAKE) -f CMakeFiles\HOGSMaker.dir\build.make CMakeFiles/HOGSMaker.dir/build
+.PHONY : HOGSMaker/fast
 
 CCExactSolver.obj: CCExactSolver.cpp.obj
 
@@ -128,7 +128,7 @@ CCExactSolver.obj: CCExactSolver.cpp.obj
 
 # target to build an object file
 CCExactSolver.cpp.obj:
-	$(MAKE) -f CMakeFiles\PACC.dir\build.make CMakeFiles/PACC.dir/CCExactSolver.cpp.obj
+	$(MAKE) -f CMakeFiles\HOGSMaker.dir\build.make CMakeFiles/HOGSMaker.dir/CCExactSolver.cpp.obj
 .PHONY : CCExactSolver.cpp.obj
 
 CCExactSolver.i: CCExactSolver.cpp.i
@@ -137,7 +137,7 @@ CCExactSolver.i: CCExactSolver.cpp.i
 
 # target to preprocess a source file
 CCExactSolver.cpp.i:
-	$(MAKE) -f CMakeFiles\PACC.dir\build.make CMakeFiles/PACC.dir/CCExactSolver.cpp.i
+	$(MAKE) -f CMakeFiles\HOGSMaker.dir\build.make CMakeFiles/HOGSMaker.dir/CCExactSolver.cpp.i
 .PHONY : CCExactSolver.cpp.i
 
 CCExactSolver.s: CCExactSolver.cpp.s
@@ -146,7 +146,7 @@ CCExactSolver.s: CCExactSolver.cpp.s
 
 # target to generate assembly for a file
 CCExactSolver.cpp.s:
-	$(MAKE) -f CMakeFiles\PACC.dir\build.make CMakeFiles/PACC.dir/CCExactSolver.cpp.s
+	$(MAKE) -f CMakeFiles\HOGSMaker.dir\build.make CMakeFiles/HOGSMaker.dir/CCExactSolver.cpp.s
 .PHONY : CCExactSolver.cpp.s
 
 Graph.obj: Graph.cpp.obj
@@ -155,7 +155,7 @@ Graph.obj: Graph.cpp.obj
 
 # target to build an object file
 Graph.cpp.obj:
-	$(MAKE) -f CMakeFiles\PACC.dir\build.make CMakeFiles/PACC.dir/Graph.cpp.obj
+	$(MAKE) -f CMakeFiles\HOGSMaker.dir\build.make CMakeFiles/HOGSMaker.dir/Graph.cpp.obj
 .PHONY : Graph.cpp.obj
 
 Graph.i: Graph.cpp.i
@@ -164,7 +164,7 @@ Graph.i: Graph.cpp.i
 
 # target to preprocess a source file
 Graph.cpp.i:
-	$(MAKE) -f CMakeFiles\PACC.dir\build.make CMakeFiles/PACC.dir/Graph.cpp.i
+	$(MAKE) -f CMakeFiles\HOGSMaker.dir\build.make CMakeFiles/HOGSMaker.dir/Graph.cpp.i
 .PHONY : Graph.cpp.i
 
 Graph.s: Graph.cpp.s
@@ -173,8 +173,143 @@ Graph.s: Graph.cpp.s
 
 # target to generate assembly for a file
 Graph.cpp.s:
-	$(MAKE) -f CMakeFiles\PACC.dir\build.make CMakeFiles/PACC.dir/Graph.cpp.s
+	$(MAKE) -f CMakeFiles\HOGSMaker.dir\build.make CMakeFiles/HOGSMaker.dir/Graph.cpp.s
 .PHONY : Graph.cpp.s
+
+HOGSMaker.obj: HOGSMaker.cpp.obj
+
+.PHONY : HOGSMaker.obj
+
+# target to build an object file
+HOGSMaker.cpp.obj:
+	$(MAKE) -f CMakeFiles\HOGSMaker.dir\build.make CMakeFiles/HOGSMaker.dir/HOGSMaker.cpp.obj
+.PHONY : HOGSMaker.cpp.obj
+
+HOGSMaker.i: HOGSMaker.cpp.i
+
+.PHONY : HOGSMaker.i
+
+# target to preprocess a source file
+HOGSMaker.cpp.i:
+	$(MAKE) -f CMakeFiles\HOGSMaker.dir\build.make CMakeFiles/HOGSMaker.dir/HOGSMaker.cpp.i
+.PHONY : HOGSMaker.cpp.i
+
+HOGSMaker.s: HOGSMaker.cpp.s
+
+.PHONY : HOGSMaker.s
+
+# target to generate assembly for a file
+HOGSMaker.cpp.s:
+	$(MAKE) -f CMakeFiles\HOGSMaker.dir\build.make CMakeFiles/HOGSMaker.dir/HOGSMaker.cpp.s
+.PHONY : HOGSMaker.cpp.s
+
+TreeSource/trees/newicklex.obj: TreeSource/trees/newicklex.cpp.obj
+
+.PHONY : TreeSource/trees/newicklex.obj
+
+# target to build an object file
+TreeSource/trees/newicklex.cpp.obj:
+	$(MAKE) -f CMakeFiles\HOGSMaker.dir\build.make CMakeFiles/HOGSMaker.dir/TreeSource/trees/newicklex.cpp.obj
+.PHONY : TreeSource/trees/newicklex.cpp.obj
+
+TreeSource/trees/newicklex.i: TreeSource/trees/newicklex.cpp.i
+
+.PHONY : TreeSource/trees/newicklex.i
+
+# target to preprocess a source file
+TreeSource/trees/newicklex.cpp.i:
+	$(MAKE) -f CMakeFiles\HOGSMaker.dir\build.make CMakeFiles/HOGSMaker.dir/TreeSource/trees/newicklex.cpp.i
+.PHONY : TreeSource/trees/newicklex.cpp.i
+
+TreeSource/trees/newicklex.s: TreeSource/trees/newicklex.cpp.s
+
+.PHONY : TreeSource/trees/newicklex.s
+
+# target to generate assembly for a file
+TreeSource/trees/newicklex.cpp.s:
+	$(MAKE) -f CMakeFiles\HOGSMaker.dir\build.make CMakeFiles/HOGSMaker.dir/TreeSource/trees/newicklex.cpp.s
+.PHONY : TreeSource/trees/newicklex.cpp.s
+
+TreeSource/trees/node.obj: TreeSource/trees/node.cpp.obj
+
+.PHONY : TreeSource/trees/node.obj
+
+# target to build an object file
+TreeSource/trees/node.cpp.obj:
+	$(MAKE) -f CMakeFiles\HOGSMaker.dir\build.make CMakeFiles/HOGSMaker.dir/TreeSource/trees/node.cpp.obj
+.PHONY : TreeSource/trees/node.cpp.obj
+
+TreeSource/trees/node.i: TreeSource/trees/node.cpp.i
+
+.PHONY : TreeSource/trees/node.i
+
+# target to preprocess a source file
+TreeSource/trees/node.cpp.i:
+	$(MAKE) -f CMakeFiles\HOGSMaker.dir\build.make CMakeFiles/HOGSMaker.dir/TreeSource/trees/node.cpp.i
+.PHONY : TreeSource/trees/node.cpp.i
+
+TreeSource/trees/node.s: TreeSource/trees/node.cpp.s
+
+.PHONY : TreeSource/trees/node.s
+
+# target to generate assembly for a file
+TreeSource/trees/node.cpp.s:
+	$(MAKE) -f CMakeFiles\HOGSMaker.dir\build.make CMakeFiles/HOGSMaker.dir/TreeSource/trees/node.cpp.s
+.PHONY : TreeSource/trees/node.cpp.s
+
+TreeSource/trees/treeinfo.obj: TreeSource/trees/treeinfo.cpp.obj
+
+.PHONY : TreeSource/trees/treeinfo.obj
+
+# target to build an object file
+TreeSource/trees/treeinfo.cpp.obj:
+	$(MAKE) -f CMakeFiles\HOGSMaker.dir\build.make CMakeFiles/HOGSMaker.dir/TreeSource/trees/treeinfo.cpp.obj
+.PHONY : TreeSource/trees/treeinfo.cpp.obj
+
+TreeSource/trees/treeinfo.i: TreeSource/trees/treeinfo.cpp.i
+
+.PHONY : TreeSource/trees/treeinfo.i
+
+# target to preprocess a source file
+TreeSource/trees/treeinfo.cpp.i:
+	$(MAKE) -f CMakeFiles\HOGSMaker.dir\build.make CMakeFiles/HOGSMaker.dir/TreeSource/trees/treeinfo.cpp.i
+.PHONY : TreeSource/trees/treeinfo.cpp.i
+
+TreeSource/trees/treeinfo.s: TreeSource/trees/treeinfo.cpp.s
+
+.PHONY : TreeSource/trees/treeinfo.s
+
+# target to generate assembly for a file
+TreeSource/trees/treeinfo.cpp.s:
+	$(MAKE) -f CMakeFiles\HOGSMaker.dir\build.make CMakeFiles/HOGSMaker.dir/TreeSource/trees/treeinfo.cpp.s
+.PHONY : TreeSource/trees/treeinfo.cpp.s
+
+TreeSource/trees/treeiterator.obj: TreeSource/trees/treeiterator.cpp.obj
+
+.PHONY : TreeSource/trees/treeiterator.obj
+
+# target to build an object file
+TreeSource/trees/treeiterator.cpp.obj:
+	$(MAKE) -f CMakeFiles\HOGSMaker.dir\build.make CMakeFiles/HOGSMaker.dir/TreeSource/trees/treeiterator.cpp.obj
+.PHONY : TreeSource/trees/treeiterator.cpp.obj
+
+TreeSource/trees/treeiterator.i: TreeSource/trees/treeiterator.cpp.i
+
+.PHONY : TreeSource/trees/treeiterator.i
+
+# target to preprocess a source file
+TreeSource/trees/treeiterator.cpp.i:
+	$(MAKE) -f CMakeFiles\HOGSMaker.dir\build.make CMakeFiles/HOGSMaker.dir/TreeSource/trees/treeiterator.cpp.i
+.PHONY : TreeSource/trees/treeiterator.cpp.i
+
+TreeSource/trees/treeiterator.s: TreeSource/trees/treeiterator.cpp.s
+
+.PHONY : TreeSource/trees/treeiterator.s
+
+# target to generate assembly for a file
+TreeSource/trees/treeiterator.cpp.s:
+	$(MAKE) -f CMakeFiles\HOGSMaker.dir\build.make CMakeFiles/HOGSMaker.dir/TreeSource/trees/treeiterator.cpp.s
+.PHONY : TreeSource/trees/treeiterator.cpp.s
 
 main.obj: main.cpp.obj
 
@@ -182,7 +317,7 @@ main.obj: main.cpp.obj
 
 # target to build an object file
 main.cpp.obj:
-	$(MAKE) -f CMakeFiles\PACC.dir\build.make CMakeFiles/PACC.dir/main.cpp.obj
+	$(MAKE) -f CMakeFiles\HOGSMaker.dir\build.make CMakeFiles/HOGSMaker.dir/main.cpp.obj
 .PHONY : main.cpp.obj
 
 main.i: main.cpp.i
@@ -191,7 +326,7 @@ main.i: main.cpp.i
 
 # target to preprocess a source file
 main.cpp.i:
-	$(MAKE) -f CMakeFiles\PACC.dir\build.make CMakeFiles/PACC.dir/main.cpp.i
+	$(MAKE) -f CMakeFiles\HOGSMaker.dir\build.make CMakeFiles/HOGSMaker.dir/main.cpp.i
 .PHONY : main.cpp.i
 
 main.s: main.cpp.s
@@ -200,7 +335,7 @@ main.s: main.cpp.s
 
 # target to generate assembly for a file
 main.cpp.s:
-	$(MAKE) -f CMakeFiles\PACC.dir\build.make CMakeFiles/PACC.dir/main.cpp.s
+	$(MAKE) -f CMakeFiles\HOGSMaker.dir\build.make CMakeFiles/HOGSMaker.dir/main.cpp.s
 .PHONY : main.cpp.s
 
 # Help Target
@@ -209,8 +344,8 @@ help:
 	@echo ... all (the default if no target is provided)
 	@echo ... clean
 	@echo ... depend
+	@echo ... HOGSMaker
 	@echo ... edit_cache
-	@echo ... PACC
 	@echo ... rebuild_cache
 	@echo ... CCExactSolver.obj
 	@echo ... CCExactSolver.i
@@ -218,6 +353,21 @@ help:
 	@echo ... Graph.obj
 	@echo ... Graph.i
 	@echo ... Graph.s
+	@echo ... HOGSMaker.obj
+	@echo ... HOGSMaker.i
+	@echo ... HOGSMaker.s
+	@echo ... TreeSource/trees/newicklex.obj
+	@echo ... TreeSource/trees/newicklex.i
+	@echo ... TreeSource/trees/newicklex.s
+	@echo ... TreeSource/trees/node.obj
+	@echo ... TreeSource/trees/node.i
+	@echo ... TreeSource/trees/node.s
+	@echo ... TreeSource/trees/treeinfo.obj
+	@echo ... TreeSource/trees/treeinfo.i
+	@echo ... TreeSource/trees/treeinfo.s
+	@echo ... TreeSource/trees/treeiterator.obj
+	@echo ... TreeSource/trees/treeiterator.i
+	@echo ... TreeSource/trees/treeiterator.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s

@@ -4,9 +4,9 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "W:/Users/Manuel/Dropbox/projects/code/PACClustering/CCExactSolver.cpp" "W:/Users/Manuel/Dropbox/projects/code/PACClustering/cmake-build-debug/CMakeFiles/PACC.dir/CCExactSolver.cpp.obj"
-  "W:/Users/Manuel/Dropbox/projects/code/PACClustering/Graph.cpp" "W:/Users/Manuel/Dropbox/projects/code/PACClustering/cmake-build-debug/CMakeFiles/PACC.dir/Graph.cpp.obj"
-  "W:/Users/Manuel/Dropbox/projects/code/PACClustering/main.cpp" "W:/Users/Manuel/Dropbox/projects/code/PACClustering/cmake-build-debug/CMakeFiles/PACC.dir/main.cpp.obj"
+  "W:/Users/Manuel/Documents/GitHub/HOGSMaker/HOGSMaker/CCExactSolver.cpp" "W:/Users/Manuel/Documents/GitHub/HOGSMaker/HOGSMaker/cmake-build-debug/CMakeFiles/PACC.dir/CCExactSolver.cpp.obj"
+  "W:/Users/Manuel/Documents/GitHub/HOGSMaker/HOGSMaker/Graph.cpp" "W:/Users/Manuel/Documents/GitHub/HOGSMaker/HOGSMaker/cmake-build-debug/CMakeFiles/PACC.dir/Graph.cpp.obj"
+  "W:/Users/Manuel/Documents/GitHub/HOGSMaker/HOGSMaker/main.cpp" "W:/Users/Manuel/Documents/GitHub/HOGSMaker/HOGSMaker/cmake-build-debug/CMakeFiles/PACC.dir/main.cpp.obj"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
