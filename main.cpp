@@ -36,6 +36,8 @@ int main(int argc, char *argv[])
     }
 
     Graph* g = NULL;
+    bool isBipartite = false;
+    vector<int> bipartition_left;
 
     if (args.find("g") != args.end())
     {
@@ -58,20 +60,37 @@ int main(int argc, char *argv[])
     g->AddWeightedEdge(0,2,1);
     g->AddWeightedEdge(1,2,-1);*/
 
-    //Graph* g = Graph::GetRandomWeightedGraph(5, -1, 1);
-
+    //GRAPH FROM A FIXD STRING
     //string s = "5\n0 1 -0.736924\n0 2 -0.0826997\n0 3 -0.562082\n0 4 0.357729\n1 2 0.869386\n1 3 0.0388327\n1 4 -0.930856\n2 3 0.0594004\n2 4 -0.984604\n3 4 -0.866316";
     //Graph* g = Graph::FromString(s);
 
-    g = Graph::GetRandomWeightedGraph(10, -1, 1);
+    //RANDOM GRAPH
+    //g = Graph::GetRandomWeightedGraph(10, -1, 1);
+
+
+    //TEST BIPARTITE GRAPH
+    g = new Graph(4);
+    g->AddWeightedEdge(0,2,1);
+    g->AddWeightedEdge(0,3,-1);
+    g->AddWeightedEdge(1,2,-1);
+    g->AddWeightedEdge(1,3,1);
+    isBipartite = true;
+    bipartition_left.push_back(0);
+    bipartition_left.push_back(1);
+
 
     cout<<g->ToString()<<endl;
 
     cout<<"Starting"<<endl;
-    CCExactSolver cc;
+    CCExactSolver cc(g);
+
+    if (isBipartite)
+    {
+        cc.SetBipartition(bipartition_left);
+    }
 
     vector<vector<int>> parts;
-    parts = cc.FindClusters(g);
+    parts = cc.FindClusters();
     cout<<"End"<<endl;
 
 
