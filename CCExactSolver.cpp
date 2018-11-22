@@ -37,6 +37,12 @@ vector< vector<int> > CCExactSolver::FindClusters()
         curbits = nextbits;
     }
 
+    //if (verbose >= 1)
+    {
+        cout<<"NB CALLS = "<<nbCalls<<endl;
+    }
+
+
     return parts;
 }
 
@@ -64,6 +70,14 @@ void CCExactSolver::FindClusters(bitset<MAX_VERTICES> bits)
     }
     costsTable[bits] = make_pair(9999999,bitset<MAX_VERTICES>());
 
+    if (verbose >= 2)
+    {
+        cout << "START COMPUTING ";
+        PrintBitSet(bits);
+        cout << endl;
+    }
+
+    nbCalls++;
 
     //This implements an exponential DP algorithm where
     //d(X) = min_{Y \subset X} d(Y) + cost(X \ Y)
@@ -88,56 +102,68 @@ void CCExactSolver::FindClusters(bitset<MAX_VERTICES> bits)
 
         bitset<MAX_VERTICES> Y_bits = split.Y_bits;
         bitset<MAX_VERTICES> outsiderbits = split.outsiderbits;
-        if (Y_bits.count() > 0)
+
+        if (outsiderbits.count() > 0)   //otherwise do nothing
         {
-            FindClusters(Y_bits); //table[sub] + cost(v - sub)
-            pair<double, bitset<MAX_VERTICES>> p = costsTable[Y_bits];
-            costSubset = p.first;
-        }
+            if (Y_bits.count() > 0) {
+                FindClusters(Y_bits); //table[sub] + cost(v - sub)
+                pair<double, bitset<MAX_VERTICES>> p = costsTable[Y_bits];
+                costSubset = p.first;
+            }
 
 
-        double costOutsider = 0;
-        //compute the cost for putting the guys outside of subsetbits as a single cluster
-        if (outsiderbits.count() == 0)
-        {
-            costOutsider = 99999999;
-        }
-        else
-        {
-            costOutsider = GetOutsiderCost(bits, outsiderbits);
-        }
+            double costOutsider = 0;
+            //compute the cost for putting the guys outside of subsetbits as a single cluster
+            if (outsiderbits.count() == 0) {
+                costOutsider = 99999999;
+            } else {
+                costOutsider = GetOutsiderCost(bits, outsiderbits);
+            }
 
 
-        double cost = costSubset + costOutsider;
+            double cost = costSubset + costOutsider;
 
 
-        pair<double, bitset<MAX_VERTICES>> p_old = costsTable[bits];
+            pair<double, bitset<MAX_VERTICES>> p_old = costsTable[bits];
 
 
-        //DEBUG
-        /*cout<<"bits=";
-        PrintBitSet(bits);
-        cout<<"   Y=";
-        PrintBitSet(Y_bits);
-        cout<<"  out=";
-        PrintBitSet(outsiderbits);
-        cout<<"   costY = "<<costSubset<<"   coutOut = "<<costOutsider<<endl;*/
+            //DEBUG
+            if (verbose >= 2) {
+                cout << "bits=";
+                PrintBitSet(bits);
+                cout << "   Y=";
+                PrintBitSet(Y_bits);
+                cout << "  out=";
+                PrintBitSet(outsiderbits);
+                cout << "   costY = " << costSubset << "   costOut = " << costOutsider << endl;
+            }
 
-        if (cost < p_old.first)
-        {
-            pair<double, bitset<MAX_VERTICES>> p_new = make_pair(cost, outsiderbits);
-            costsTable[bits] = p_new;
+            if (cost < p_old.first) {
+                pair<double, bitset<MAX_VERTICES>> p_new = make_pair(cost, outsiderbits);
+                costsTable[bits] = p_new;
+            }
         }
 
         split = splitter->GetNextValidSplit();
     }
 
     //DEBUG
-    if (bits.count() == graph->GetNbVertices()) {
+    if (verbose >= 1) {
+        if (bits.count() == graph->GetNbVertices()) {
+            cout << "DONE" << endl;
+            PrintBitSet(bits);
+            cout << "  cost=" << costsTable[bits].first << "  outbits = ";
+            bitset<MAX_VERTICES> outbits = costsTable[bits].second;
+            PrintBitSet(outbits);
+            cout << endl;
+        }
+    }
+
+
+    //DEBUG
+    if (verbose >= 2) {
+        cout << "END COMPUTING ";
         PrintBitSet(bits);
-        cout << "  cost=" << costsTable[bits].first << "  outbits = ";
-        bitset<MAX_VERTICES> outbits = costsTable[bits].second;
-        PrintBitSet(outbits);
         cout << endl;
     }
 
@@ -163,7 +189,7 @@ CCExactSolver_Split CCExactSolver_SplitterGeneric::GetNextValidSplit()
     split.finished = false;
 
     int n = bits.count();
-    if (counter > pow(2, n + 1) - 1)
+    if (counter > pow(2, n) - 1)
     {
         split.finished = true;
         return split;
@@ -295,8 +321,9 @@ CCExactSolver_SplitterBipartite::CCExactSolver_SplitterBipartite(Graph* g, bitse
 CCExactSolver_Split CCExactSolver_SplitterBipartite::GetNextValidSplit()
 {
     CCExactSolver_Split split;
+    split.finished = false;
     int n = bits_left.count();
-    if (counter_left > pow(2, n + 1) - 1)
+    if (counter_left > pow(2, n) - 1)
     {
         split.finished = true;
         return split;
@@ -313,7 +340,7 @@ CCExactSolver_Split CCExactSolver_SplitterBipartite::GetNextValidSplit()
         {
             outsiderbits[i] = 1;
         }
-        if (bits.test(i) && cur_insider_left.test(i))
+        if (bits.test(i) && !outsiderbits.test(i))
         {
             insiderbits[i] = 1;
         }
@@ -324,7 +351,7 @@ CCExactSolver_Split CCExactSolver_SplitterBipartite::GetNextValidSplit()
     //We've gone through all possible guys on the right -> increase left counter and restart
     counter_right++;
     int m = cur_maybe_right.count();
-    if (counter_right > pow(2, m + 1) - 1)
+    if (counter_right > pow(2, m) - 1)
     {
         counter_left++;
         ApplyNewCounterLeft();
@@ -342,8 +369,31 @@ void CCExactSolver_SplitterBipartite::ApplyNewCounterLeft()
     cur_outsider_left = pair_of_bits_left.second;
 
     //SETUP MAYBES
-    cur_mustbe_right = bitset<MAX_VERTICES>();
     cur_maybe_right = bits_right;
+    for (int r = 0; r < bits_right.size(); r++)
+    {
+        if (bits.test(r))
+        {
+            //sum of weights into left bits
+            //if we save more cost by NOT adding r with the left outsiders, then we won't even try
+            double w_left = 0;
+            for (int l = 0; l < bits_left.size(); l++)
+            {
+                if (cur_outsider_left.test(l))
+                {
+                    double w = graph->GetEdgeWeight(l, r);
+                    w_left += w;
+                }
+            }
+            if (w_left < 0)
+            {
+                cur_maybe_right[r] = 0;
+            }
+        }
+    }
+
+    cur_mustbe_right = bitset<MAX_VERTICES>();
+
 
     counter_right = 0;
 }

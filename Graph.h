@@ -35,7 +35,10 @@ public:
     string ToString();
 
     static Graph* GetRandomWeightedGraph(int n, double minw, double maxw);
-    static Graph* FromString(string s);
+
+    static Graph* GetRandomBinaryWeightedGraph(int n1, int n2, double minw, double maxw);
+
+    static Graph* FromString(string s, string edge_separator = "\n");
 
 private:
     int nbVertices;

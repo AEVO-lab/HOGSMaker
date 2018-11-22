@@ -59,6 +59,27 @@ Graph* Graph::GetRandomWeightedGraph(int n, double minw, double maxw)
     return g;
 }
 
+
+Graph* Graph::GetRandomBinaryWeightedGraph(int n1, int n2, double minw, double maxw)
+{
+    Graph* g = new Graph(n1 + n2);
+
+    std::uniform_real_distribution<double> r(minw, maxw);
+    std::default_random_engine re;
+
+    for (int i = 0; i < n1; i++)
+    {
+        for (int j = 0; j < n2; j++)
+        {
+            double w = r(re);
+            g->AddWeightedEdge(i, n1 + j, w);
+        }
+    }
+
+    return g;
+}
+
+
 string Graph::ToString()
 {
     string s = Util::ToString(this->GetNbVertices()) + "\n";
@@ -66,16 +87,19 @@ string Graph::ToString()
     {
         for (int j = i + 1; j < this->GetNbVertices(); j++)
         {
-            s += Util::ToString(i) + " " + Util::ToString(j) + " " + Util::ToString(this->GetEdgeWeight(i, j)) + "\n";
+            double w = this->GetEdgeWeight(i, j);
+            if (w != 0) {
+                s += Util::ToString(i) + " " + Util::ToString(j) + " " + Util::ToString(w) + "\n";
+            }
         }
     }
     return s;
 }
 
-Graph* Graph::FromString(string s)
+Graph* Graph::FromString(string s, string edge_separator)
 {
     //TODO; error checking
-    vector<string> lines = Util::Split(s, "\n", false);
+    vector<string> lines = Util::Split(s, edge_separator, false);
 
     Graph* g = new Graph(Util::ToInt(lines[0]));
 

@@ -13,6 +13,7 @@
 #include <vector>
 #include <bitset>
 #include <unordered_map>
+#include "TreeSource/div/Timer.h"
 
 //for internal use only
 class CCExactSolver_Split
@@ -92,10 +93,14 @@ private:
 class CCExactSolver {
 public:
 
+    int verbose;
+
     CCExactSolver(Graph *g)
     {
         this->graph = g;
         isBipartite = false;
+        verbose = 0;
+        nbCalls = 0;
     }
 
     vector< vector<int> > FindClusters();
@@ -124,6 +129,7 @@ private:
     bitset<MAX_VERTICES> bits_left;
     bitset<MAX_VERTICES> bits_right;
 
+    int nbCalls;
 };
 
 

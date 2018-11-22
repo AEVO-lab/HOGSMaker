@@ -38,19 +38,19 @@ cmake_force:
 SHELL = cmd.exe
 
 # The CMake executable.
-CMAKE_COMMAND = "W:\Program Files\JetBrains\CLion 2018.2.6\bin\cmake\win\bin\cmake.exe"
+CMAKE_COMMAND = "C:\Program Files\JetBrains\CLion 2018.2.6\bin\cmake\win\bin\cmake.exe"
 
 # The command to remove a file.
-RM = "W:\Program Files\JetBrains\CLion 2018.2.6\bin\cmake\win\bin\cmake.exe" -E remove -f
+RM = "C:\Program Files\JetBrains\CLion 2018.2.6\bin\cmake\win\bin\cmake.exe" -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = W:\Users\Manuel\Documents\GitHub\HOGSMaker\HOGSMaker
+CMAKE_SOURCE_DIR = C:\Users\Manuel\Documents\git\HOGSMaker\HOGSMaker
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = W:\Users\Manuel\Documents\GitHub\HOGSMaker\HOGSMaker\cmake-build-debug
+CMAKE_BINARY_DIR = C:\Users\Manuel\Documents\git\HOGSMaker\HOGSMaker\cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -58,7 +58,7 @@ CMAKE_BINARY_DIR = W:\Users\Manuel\Documents\GitHub\HOGSMaker\HOGSMaker\cmake-bu
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	"W:\Program Files\JetBrains\CLion 2018.2.6\bin\cmake\win\bin\cmake.exe" -E echo "No interactive CMake dialog available."
+	"C:\Program Files\JetBrains\CLion 2018.2.6\bin\cmake\win\bin\cmake.exe" -E echo "No interactive CMake dialog available."
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -69,7 +69,7 @@ edit_cache/fast: edit_cache
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	"W:\Program Files\JetBrains\CLion 2018.2.6\bin\cmake\win\bin\cmake.exe" -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	"C:\Program Files\JetBrains\CLion 2018.2.6\bin\cmake\win\bin\cmake.exe" -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -79,9 +79,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start W:\Users\Manuel\Documents\GitHub\HOGSMaker\HOGSMaker\cmake-build-debug\CMakeFiles W:\Users\Manuel\Documents\GitHub\HOGSMaker\HOGSMaker\cmake-build-debug\CMakeFiles\progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\Manuel\Documents\git\HOGSMaker\HOGSMaker\cmake-build-debug\CMakeFiles C:\Users\Manuel\Documents\git\HOGSMaker\HOGSMaker\cmake-build-debug\CMakeFiles\progress.marks
 	$(MAKE) -f CMakeFiles\Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start W:\Users\Manuel\Documents\GitHub\HOGSMaker\HOGSMaker\cmake-build-debug\CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\Manuel\Documents\git\HOGSMaker\HOGSMaker\cmake-build-debug\CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -202,6 +202,60 @@ HOGSMaker.s: HOGSMaker.cpp.s
 HOGSMaker.cpp.s:
 	$(MAKE) -f CMakeFiles\HOGSMaker.dir\build.make CMakeFiles/HOGSMaker.dir/HOGSMaker.cpp.s
 .PHONY : HOGSMaker.cpp.s
+
+TreeSource/div/FixedObjectPool.obj: TreeSource/div/FixedObjectPool.cpp.obj
+
+.PHONY : TreeSource/div/FixedObjectPool.obj
+
+# target to build an object file
+TreeSource/div/FixedObjectPool.cpp.obj:
+	$(MAKE) -f CMakeFiles\HOGSMaker.dir\build.make CMakeFiles/HOGSMaker.dir/TreeSource/div/FixedObjectPool.cpp.obj
+.PHONY : TreeSource/div/FixedObjectPool.cpp.obj
+
+TreeSource/div/FixedObjectPool.i: TreeSource/div/FixedObjectPool.cpp.i
+
+.PHONY : TreeSource/div/FixedObjectPool.i
+
+# target to preprocess a source file
+TreeSource/div/FixedObjectPool.cpp.i:
+	$(MAKE) -f CMakeFiles\HOGSMaker.dir\build.make CMakeFiles/HOGSMaker.dir/TreeSource/div/FixedObjectPool.cpp.i
+.PHONY : TreeSource/div/FixedObjectPool.cpp.i
+
+TreeSource/div/FixedObjectPool.s: TreeSource/div/FixedObjectPool.cpp.s
+
+.PHONY : TreeSource/div/FixedObjectPool.s
+
+# target to generate assembly for a file
+TreeSource/div/FixedObjectPool.cpp.s:
+	$(MAKE) -f CMakeFiles\HOGSMaker.dir\build.make CMakeFiles/HOGSMaker.dir/TreeSource/div/FixedObjectPool.cpp.s
+.PHONY : TreeSource/div/FixedObjectPool.cpp.s
+
+TreeSource/div/Timer.obj: TreeSource/div/Timer.cpp.obj
+
+.PHONY : TreeSource/div/Timer.obj
+
+# target to build an object file
+TreeSource/div/Timer.cpp.obj:
+	$(MAKE) -f CMakeFiles\HOGSMaker.dir\build.make CMakeFiles/HOGSMaker.dir/TreeSource/div/Timer.cpp.obj
+.PHONY : TreeSource/div/Timer.cpp.obj
+
+TreeSource/div/Timer.i: TreeSource/div/Timer.cpp.i
+
+.PHONY : TreeSource/div/Timer.i
+
+# target to preprocess a source file
+TreeSource/div/Timer.cpp.i:
+	$(MAKE) -f CMakeFiles\HOGSMaker.dir\build.make CMakeFiles/HOGSMaker.dir/TreeSource/div/Timer.cpp.i
+.PHONY : TreeSource/div/Timer.cpp.i
+
+TreeSource/div/Timer.s: TreeSource/div/Timer.cpp.s
+
+.PHONY : TreeSource/div/Timer.s
+
+# target to generate assembly for a file
+TreeSource/div/Timer.cpp.s:
+	$(MAKE) -f CMakeFiles\HOGSMaker.dir\build.make CMakeFiles/HOGSMaker.dir/TreeSource/div/Timer.cpp.s
+.PHONY : TreeSource/div/Timer.cpp.s
 
 TreeSource/trees/newicklex.obj: TreeSource/trees/newicklex.cpp.obj
 
@@ -356,6 +410,12 @@ help:
 	@echo ... HOGSMaker.obj
 	@echo ... HOGSMaker.i
 	@echo ... HOGSMaker.s
+	@echo ... TreeSource/div/FixedObjectPool.obj
+	@echo ... TreeSource/div/FixedObjectPool.i
+	@echo ... TreeSource/div/FixedObjectPool.s
+	@echo ... TreeSource/div/Timer.obj
+	@echo ... TreeSource/div/Timer.i
+	@echo ... TreeSource/div/Timer.s
 	@echo ... TreeSource/trees/newicklex.obj
 	@echo ... TreeSource/trees/newicklex.i
 	@echo ... TreeSource/trees/newicklex.s
