@@ -1,8 +1,8 @@
-# Install script for directory: C:/Users/Manuel/Documents/git/HOGSMaker/HOGSMaker
+# Install script for directory: W:/Users/Manuel/Documents/GitHub/HOGSMaker/HOGSMaker
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "C:/Program Files (x86)/HOGSMaker")
+  set(CMAKE_INSTALL_PREFIX "W:/Program Files (x86)/HOGSMaker")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -12,7 +12,7 @@ if(NOT DEFINED CMAKE_INSTALL_CONFIG_NAME)
     string(REGEX REPLACE "^[^A-Za-z0-9_]+" ""
            CMAKE_INSTALL_CONFIG_NAME "${BUILD_TYPE}")
   else()
-    set(CMAKE_INSTALL_CONFIG_NAME "Debug")
+    set(CMAKE_INSTALL_CONFIG_NAME "Release")
   endif()
   message(STATUS "Install configuration: \"${CMAKE_INSTALL_CONFIG_NAME}\"")
 endif()
@@ -40,5 +40,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "C:/Users/Manuel/Documents/git/HOGSMaker/HOGSMaker/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "W:/Users/Manuel/Documents/GitHub/HOGSMaker/HOGSMaker/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

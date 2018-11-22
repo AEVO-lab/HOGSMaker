@@ -228,9 +228,10 @@ void PrintPartition(vector<vector<int>> parts)
 
 void DoSomePerformanceTests()
 {
-    int n1 = 7;
-    int n2 = 7;
+    int n1 = 10;
+    int n2 = 10;
     Graph* g = Graph::GetRandomBinaryWeightedGraph(n1, n2, -1, 1);
+    cout<<g->ToString();
     vector<int> bip = Util::GetVectorOfIntegers(0, n1 - 1);
 
     cout<<"Running test 1"<<endl;
@@ -246,8 +247,10 @@ void DoSomePerformanceTests()
     std::chrono::high_resolution_clock::time_point t1_bip = std::chrono::high_resolution_clock::now();
     CCExactSolver cc_bip(g);
     cc_bip.SetBipartition(bip);
-    cc_bip.FindClusters();
+    vector<vector<int>> clusters_bip = cc_bip.FindClusters();
     std::chrono::high_resolution_clock::time_point t2_bip = std::chrono::high_resolution_clock::now();
+
+    PrintPartition(clusters_bip);
 
     auto duration_bip = std::chrono::duration_cast<std::chrono::milliseconds>( t2_bip - t1_bip ).count();
     cout<<"Time 2 ="<<duration_bip<<endl;

@@ -7,6 +7,7 @@
 
 vector< vector<int> > CCExactSolver::FindClusters()
 {
+    InitSplitterPool();
     bitset<MAX_VERTICES> bitsall;
     for (int i = 0; i < graph->GetNbVertices(); i++)
     {
@@ -58,6 +59,44 @@ vector<int> CCExactSolver::BitsetToVector(bitset<MAX_VERTICES> bits)
 }
 
 
+void CCExactSolver::InitSplitterPool()
+{
+    for (int i = 0; i <= graph->GetNbVertices() + 1; i++)
+    {
+        CCExactSolver_Splitter* splitter;
+        bitset<MAX_VERTICES> dummy;
+        if (isBipartite)
+        {
+            splitter = new CCExactSolver_SplitterBipartite(graph, dummy, dummy, dummy);
+        }
+        else
+        {
+            splitter = new CCExactSolver_SplitterGeneric(graph, dummy);
+        }
+
+        splitterPool.push_back(splitter);
+        splitterPoolInUse.push_back(false);
+    }
+}
+
+CCExactSolver_Splitter* CCExactSolver::GetSplitterFromPool(int id_wanted)
+{
+    if (splitterPoolInUse[id_wanted])
+    {
+        cout<<"ERROR!  Splitter already in use.  Program is likely to crash soon."<<endl;
+        return NULL;
+    }
+
+    splitterPoolInUse[id_wanted] = true;
+    return splitterPool[id_wanted];
+}
+
+void CCExactSolver::ReleaseSplitter(int id)
+{
+    splitterPoolInUse[id] = false;
+}
+
+
 void CCExactSolver::FindClusters(bitset<MAX_VERTICES> bits)
 {
     if (bits.count() == 0 || costsTable.find(bits) != costsTable.end())
@@ -81,16 +120,26 @@ void CCExactSolver::FindClusters(bitset<MAX_VERTICES> bits)
 
     //This implements an exponential DP algorithm where
     //d(X) = min_{Y \subset X} d(Y) + cost(X \ Y)
-
+    int nbits = bits.count();
     CCExactSolver_Splitter* splitter;
 
     if (this->isBipartite)
     {
-        splitter = new CCExactSolver_SplitterBipartite(graph, bits, bits_left, bits_right);
+        if (useSplitterPool) {
+            splitter = GetSplitterFromPool(nbits);
+            ((CCExactSolver_SplitterBipartite *) splitter)->Reset(bits, bits_left, bits_right);
+        }
+        else
+            splitter = new CCExactSolver_SplitterBipartite(graph, bits, bits_left, bits_right);
     }
     else
     {
-        splitter = new CCExactSolver_SplitterGeneric(graph, bits);
+        if (useSplitterPool) {
+            splitter = GetSplitterFromPool(nbits);
+            ((CCExactSolver_SplitterGeneric *) splitter)->Reset(bits);
+        }
+        else
+            splitter = new CCExactSolver_SplitterGeneric(graph, bits);
     }
 
 
@@ -167,7 +216,10 @@ void CCExactSolver::FindClusters(bitset<MAX_VERTICES> bits)
         cout << endl;
     }
 
-    delete splitter;
+    if (useSplitterPool)
+        ReleaseSplitter(nbits);
+    else
+        delete splitter;
 
 }
 
@@ -299,22 +351,8 @@ pair<bitset<MAX_VERTICES>, bitset<MAX_VERTICES>> CCExactSolver_Splitter::Counter
 CCExactSolver_SplitterBipartite::CCExactSolver_SplitterBipartite(Graph* g, bitset<MAX_VERTICES> &bits, bitset<MAX_VERTICES> &vertices_left, bitset<MAX_VERTICES> &vertices_right)
 {
     graph = g;
-    this->bits = bits;
-    counter_left = 0;
-    counter_right = 0;
-    bits_left = vertices_left;
-    bits_right = vertices_right;
 
-    for (int i = 0; i < bits_left.size(); i++)
-    {
-        if (!bits.test(i))
-        {
-            bits_left[i] = 0;
-            bits_right[i] = 0;
-        }
-    }
-
-    ApplyNewCounterLeft();
+    Reset(bits, vertices_left, vertices_right);
 }
 
 
@@ -368,32 +406,81 @@ void CCExactSolver_SplitterBipartite::ApplyNewCounterLeft()
     cur_insider_left = pair_of_bits_left.first;
     cur_outsider_left = pair_of_bits_left.second;
 
-    //SETUP MAYBES
+    //SETUP MAYBES AND MUST BE
     cur_maybe_right = bits_right;
+    cur_mustbe_right = bitset<MAX_VERTICES>();
     for (int r = 0; r < bits_right.size(); r++)
     {
         if (bits.test(r))
         {
             //sum of weights into left bits
             //if we save more cost by NOT adding r with the left outsiders, then we won't even try
-            double w_left = 0;
+            double w_pos_left_outsider = 0, w_neg_left_outsider = 0;
+            double w_pos_left_insider = 0, w_neg_left_insider = 0;
             for (int l = 0; l < bits_left.size(); l++)
             {
                 if (cur_outsider_left.test(l))
                 {
                     double w = graph->GetEdgeWeight(l, r);
-                    w_left += w;
+                    if (w < 0)
+                        w_neg_left_outsider += (-w);
+                    else
+                        w_pos_left_outsider += w;
+                }
+                else if (cur_insider_left.test(l))
+                {
+                    double w = graph->GetEdgeWeight(l, r);
+                    if (w < 0)
+                        w_neg_left_insider += (-w);
+                    else
+                        w_pos_left_insider += w;
                 }
             }
-            if (w_left < 0)
+
+            //if adding r in the outsider clique costs more than isolating it, don't consider it in outsider
+            if (w_neg_left_outsider > w_pos_left_outsider)
             {
+                cur_maybe_right[r] = 0;
+            }
+            //if what we pay to have r not in outsider is greater than what we pay by having it in, then put it in
+            else if (w_pos_left_outsider > w_pos_left_insider + w_neg_left_outsider)
+            {
+                cur_mustbe_right[r] = 1;
                 cur_maybe_right[r] = 0;
             }
         }
     }
 
-    cur_mustbe_right = bitset<MAX_VERTICES>();
+
+
+
 
 
     counter_right = 0;
+}
+
+
+void CCExactSolver_SplitterGeneric::Reset(bitset<MAX_VERTICES> &bits)
+{
+    this->bits = bits;
+    this->counter = 0;
+}
+
+void CCExactSolver_SplitterBipartite::Reset(bitset<MAX_VERTICES> &bits, bitset<MAX_VERTICES> &vertices_left, bitset<MAX_VERTICES> &vertices_right)
+{
+    bits_left = vertices_left;
+    bits_right = vertices_right;
+    this->bits = bits;
+    counter_left = 0;
+    counter_right = 0;
+    for (int i = 0; i < bits_left.size(); i++)
+    {
+        if (!bits.test(i))
+        {
+            bits_left[i] = 0;
+            bits_right[i] = 0;
+        }
+    }
+
+    ApplyNewCounterLeft();
 }

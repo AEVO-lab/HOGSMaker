@@ -52,6 +52,7 @@ public:
     }
 
     CCExactSolver_Split GetNextValidSplit();
+    void Reset(bitset<MAX_VERTICES> &bits);
 
 private:
     Graph* graph;
@@ -68,6 +69,7 @@ public:
     CCExactSolver_SplitterBipartite(Graph* g, bitset<MAX_VERTICES> &bits, bitset<MAX_VERTICES> &vertices_left, bitset<MAX_VERTICES> &vertices_right);
 
     CCExactSolver_Split GetNextValidSplit();
+    void Reset(bitset<MAX_VERTICES> &bits, bitset<MAX_VERTICES> &vertices_left, bitset<MAX_VERTICES> &vertices_right);
 
 private:
     Graph* graph;
@@ -101,6 +103,15 @@ public:
         isBipartite = false;
         verbose = 0;
         nbCalls = 0;
+        useSplitterPool = true;
+    }
+
+    ~CCExactSolver()
+    {
+        for (int i = 0; i < splitterPool.size(); i++)
+        {
+            delete splitterPool[i];
+        }
     }
 
     vector< vector<int> > FindClusters();
@@ -130,6 +141,13 @@ private:
     bitset<MAX_VERTICES> bits_right;
 
     int nbCalls;
+
+    vector< CCExactSolver_Splitter* > splitterPool;
+    vector< bool > splitterPoolInUse;
+    void InitSplitterPool();
+    CCExactSolver_Splitter* GetSplitterFromPool(int id_wanted);
+    void ReleaseSplitter(int id);
+    bool useSplitterPool;
 };
 
 
