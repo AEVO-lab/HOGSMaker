@@ -228,8 +228,8 @@ void PrintPartition(vector<vector<int>> parts)
 
 void DoSomePerformanceTests()
 {
-    int n1 = 10;
-    int n2 = 10;
+    int n1 = 11;
+    int n2 = 11;
     Graph* g = Graph::GetRandomBinaryWeightedGraph(n1, n2, -1, 1);
     cout<<g->ToString();
     vector<int> bip = Util::GetVectorOfIntegers(0, n1 - 1);
