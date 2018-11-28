@@ -103,7 +103,7 @@ public:
         isBipartite = false;
         verbose = 0;
         nbCalls = 0;
-        useSplitterPool = true;
+        useSplitterPool = false;
     }
 
     ~CCExactSolver()

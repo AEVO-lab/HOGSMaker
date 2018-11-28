@@ -203,6 +203,33 @@ HOGSMaker.cpp.s:
 	$(MAKE) -f CMakeFiles\HOGSMaker.dir\build.make CMakeFiles/HOGSMaker.dir/HOGSMaker.cpp.s
 .PHONY : HOGSMaker.cpp.s
 
+OMAParser.obj: OMAParser.cpp.obj
+
+.PHONY : OMAParser.obj
+
+# target to build an object file
+OMAParser.cpp.obj:
+	$(MAKE) -f CMakeFiles\HOGSMaker.dir\build.make CMakeFiles/HOGSMaker.dir/OMAParser.cpp.obj
+.PHONY : OMAParser.cpp.obj
+
+OMAParser.i: OMAParser.cpp.i
+
+.PHONY : OMAParser.i
+
+# target to preprocess a source file
+OMAParser.cpp.i:
+	$(MAKE) -f CMakeFiles\HOGSMaker.dir\build.make CMakeFiles/HOGSMaker.dir/OMAParser.cpp.i
+.PHONY : OMAParser.cpp.i
+
+OMAParser.s: OMAParser.cpp.s
+
+.PHONY : OMAParser.s
+
+# target to generate assembly for a file
+OMAParser.cpp.s:
+	$(MAKE) -f CMakeFiles\HOGSMaker.dir\build.make CMakeFiles/HOGSMaker.dir/OMAParser.cpp.s
+.PHONY : OMAParser.cpp.s
+
 TreeSource/div/Timer.obj: TreeSource/div/Timer.cpp.obj
 
 .PHONY : TreeSource/div/Timer.obj
@@ -229,6 +256,33 @@ TreeSource/div/Timer.s: TreeSource/div/Timer.cpp.s
 TreeSource/div/Timer.cpp.s:
 	$(MAKE) -f CMakeFiles\HOGSMaker.dir\build.make CMakeFiles/HOGSMaker.dir/TreeSource/div/Timer.cpp.s
 .PHONY : TreeSource/div/Timer.cpp.s
+
+TreeSource/trees/genespeciestreeutil.obj: TreeSource/trees/genespeciestreeutil.cpp.obj
+
+.PHONY : TreeSource/trees/genespeciestreeutil.obj
+
+# target to build an object file
+TreeSource/trees/genespeciestreeutil.cpp.obj:
+	$(MAKE) -f CMakeFiles\HOGSMaker.dir\build.make CMakeFiles/HOGSMaker.dir/TreeSource/trees/genespeciestreeutil.cpp.obj
+.PHONY : TreeSource/trees/genespeciestreeutil.cpp.obj
+
+TreeSource/trees/genespeciestreeutil.i: TreeSource/trees/genespeciestreeutil.cpp.i
+
+.PHONY : TreeSource/trees/genespeciestreeutil.i
+
+# target to preprocess a source file
+TreeSource/trees/genespeciestreeutil.cpp.i:
+	$(MAKE) -f CMakeFiles\HOGSMaker.dir\build.make CMakeFiles/HOGSMaker.dir/TreeSource/trees/genespeciestreeutil.cpp.i
+.PHONY : TreeSource/trees/genespeciestreeutil.cpp.i
+
+TreeSource/trees/genespeciestreeutil.s: TreeSource/trees/genespeciestreeutil.cpp.s
+
+.PHONY : TreeSource/trees/genespeciestreeutil.s
+
+# target to generate assembly for a file
+TreeSource/trees/genespeciestreeutil.cpp.s:
+	$(MAKE) -f CMakeFiles\HOGSMaker.dir\build.make CMakeFiles/HOGSMaker.dir/TreeSource/trees/genespeciestreeutil.cpp.s
+.PHONY : TreeSource/trees/genespeciestreeutil.cpp.s
 
 TreeSource/trees/newicklex.obj: TreeSource/trees/newicklex.cpp.obj
 
@@ -365,6 +419,438 @@ main.cpp.s:
 	$(MAKE) -f CMakeFiles\HOGSMaker.dir\build.make CMakeFiles/HOGSMaker.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+zlib/adler32.obj: zlib/adler32.c.obj
+
+.PHONY : zlib/adler32.obj
+
+# target to build an object file
+zlib/adler32.c.obj:
+	$(MAKE) -f CMakeFiles\HOGSMaker.dir\build.make CMakeFiles/HOGSMaker.dir/zlib/adler32.c.obj
+.PHONY : zlib/adler32.c.obj
+
+zlib/adler32.i: zlib/adler32.c.i
+
+.PHONY : zlib/adler32.i
+
+# target to preprocess a source file
+zlib/adler32.c.i:
+	$(MAKE) -f CMakeFiles\HOGSMaker.dir\build.make CMakeFiles/HOGSMaker.dir/zlib/adler32.c.i
+.PHONY : zlib/adler32.c.i
+
+zlib/adler32.s: zlib/adler32.c.s
+
+.PHONY : zlib/adler32.s
+
+# target to generate assembly for a file
+zlib/adler32.c.s:
+	$(MAKE) -f CMakeFiles\HOGSMaker.dir\build.make CMakeFiles/HOGSMaker.dir/zlib/adler32.c.s
+.PHONY : zlib/adler32.c.s
+
+zlib/compress.obj: zlib/compress.c.obj
+
+.PHONY : zlib/compress.obj
+
+# target to build an object file
+zlib/compress.c.obj:
+	$(MAKE) -f CMakeFiles\HOGSMaker.dir\build.make CMakeFiles/HOGSMaker.dir/zlib/compress.c.obj
+.PHONY : zlib/compress.c.obj
+
+zlib/compress.i: zlib/compress.c.i
+
+.PHONY : zlib/compress.i
+
+# target to preprocess a source file
+zlib/compress.c.i:
+	$(MAKE) -f CMakeFiles\HOGSMaker.dir\build.make CMakeFiles/HOGSMaker.dir/zlib/compress.c.i
+.PHONY : zlib/compress.c.i
+
+zlib/compress.s: zlib/compress.c.s
+
+.PHONY : zlib/compress.s
+
+# target to generate assembly for a file
+zlib/compress.c.s:
+	$(MAKE) -f CMakeFiles\HOGSMaker.dir\build.make CMakeFiles/HOGSMaker.dir/zlib/compress.c.s
+.PHONY : zlib/compress.c.s
+
+zlib/crc32.obj: zlib/crc32.c.obj
+
+.PHONY : zlib/crc32.obj
+
+# target to build an object file
+zlib/crc32.c.obj:
+	$(MAKE) -f CMakeFiles\HOGSMaker.dir\build.make CMakeFiles/HOGSMaker.dir/zlib/crc32.c.obj
+.PHONY : zlib/crc32.c.obj
+
+zlib/crc32.i: zlib/crc32.c.i
+
+.PHONY : zlib/crc32.i
+
+# target to preprocess a source file
+zlib/crc32.c.i:
+	$(MAKE) -f CMakeFiles\HOGSMaker.dir\build.make CMakeFiles/HOGSMaker.dir/zlib/crc32.c.i
+.PHONY : zlib/crc32.c.i
+
+zlib/crc32.s: zlib/crc32.c.s
+
+.PHONY : zlib/crc32.s
+
+# target to generate assembly for a file
+zlib/crc32.c.s:
+	$(MAKE) -f CMakeFiles\HOGSMaker.dir\build.make CMakeFiles/HOGSMaker.dir/zlib/crc32.c.s
+.PHONY : zlib/crc32.c.s
+
+zlib/deflate.obj: zlib/deflate.c.obj
+
+.PHONY : zlib/deflate.obj
+
+# target to build an object file
+zlib/deflate.c.obj:
+	$(MAKE) -f CMakeFiles\HOGSMaker.dir\build.make CMakeFiles/HOGSMaker.dir/zlib/deflate.c.obj
+.PHONY : zlib/deflate.c.obj
+
+zlib/deflate.i: zlib/deflate.c.i
+
+.PHONY : zlib/deflate.i
+
+# target to preprocess a source file
+zlib/deflate.c.i:
+	$(MAKE) -f CMakeFiles\HOGSMaker.dir\build.make CMakeFiles/HOGSMaker.dir/zlib/deflate.c.i
+.PHONY : zlib/deflate.c.i
+
+zlib/deflate.s: zlib/deflate.c.s
+
+.PHONY : zlib/deflate.s
+
+# target to generate assembly for a file
+zlib/deflate.c.s:
+	$(MAKE) -f CMakeFiles\HOGSMaker.dir\build.make CMakeFiles/HOGSMaker.dir/zlib/deflate.c.s
+.PHONY : zlib/deflate.c.s
+
+zlib/gzclose.obj: zlib/gzclose.c.obj
+
+.PHONY : zlib/gzclose.obj
+
+# target to build an object file
+zlib/gzclose.c.obj:
+	$(MAKE) -f CMakeFiles\HOGSMaker.dir\build.make CMakeFiles/HOGSMaker.dir/zlib/gzclose.c.obj
+.PHONY : zlib/gzclose.c.obj
+
+zlib/gzclose.i: zlib/gzclose.c.i
+
+.PHONY : zlib/gzclose.i
+
+# target to preprocess a source file
+zlib/gzclose.c.i:
+	$(MAKE) -f CMakeFiles\HOGSMaker.dir\build.make CMakeFiles/HOGSMaker.dir/zlib/gzclose.c.i
+.PHONY : zlib/gzclose.c.i
+
+zlib/gzclose.s: zlib/gzclose.c.s
+
+.PHONY : zlib/gzclose.s
+
+# target to generate assembly for a file
+zlib/gzclose.c.s:
+	$(MAKE) -f CMakeFiles\HOGSMaker.dir\build.make CMakeFiles/HOGSMaker.dir/zlib/gzclose.c.s
+.PHONY : zlib/gzclose.c.s
+
+zlib/gzlib.obj: zlib/gzlib.c.obj
+
+.PHONY : zlib/gzlib.obj
+
+# target to build an object file
+zlib/gzlib.c.obj:
+	$(MAKE) -f CMakeFiles\HOGSMaker.dir\build.make CMakeFiles/HOGSMaker.dir/zlib/gzlib.c.obj
+.PHONY : zlib/gzlib.c.obj
+
+zlib/gzlib.i: zlib/gzlib.c.i
+
+.PHONY : zlib/gzlib.i
+
+# target to preprocess a source file
+zlib/gzlib.c.i:
+	$(MAKE) -f CMakeFiles\HOGSMaker.dir\build.make CMakeFiles/HOGSMaker.dir/zlib/gzlib.c.i
+.PHONY : zlib/gzlib.c.i
+
+zlib/gzlib.s: zlib/gzlib.c.s
+
+.PHONY : zlib/gzlib.s
+
+# target to generate assembly for a file
+zlib/gzlib.c.s:
+	$(MAKE) -f CMakeFiles\HOGSMaker.dir\build.make CMakeFiles/HOGSMaker.dir/zlib/gzlib.c.s
+.PHONY : zlib/gzlib.c.s
+
+zlib/gzread.obj: zlib/gzread.c.obj
+
+.PHONY : zlib/gzread.obj
+
+# target to build an object file
+zlib/gzread.c.obj:
+	$(MAKE) -f CMakeFiles\HOGSMaker.dir\build.make CMakeFiles/HOGSMaker.dir/zlib/gzread.c.obj
+.PHONY : zlib/gzread.c.obj
+
+zlib/gzread.i: zlib/gzread.c.i
+
+.PHONY : zlib/gzread.i
+
+# target to preprocess a source file
+zlib/gzread.c.i:
+	$(MAKE) -f CMakeFiles\HOGSMaker.dir\build.make CMakeFiles/HOGSMaker.dir/zlib/gzread.c.i
+.PHONY : zlib/gzread.c.i
+
+zlib/gzread.s: zlib/gzread.c.s
+
+.PHONY : zlib/gzread.s
+
+# target to generate assembly for a file
+zlib/gzread.c.s:
+	$(MAKE) -f CMakeFiles\HOGSMaker.dir\build.make CMakeFiles/HOGSMaker.dir/zlib/gzread.c.s
+.PHONY : zlib/gzread.c.s
+
+zlib/gzstream.obj: zlib/gzstream.C.obj
+
+.PHONY : zlib/gzstream.obj
+
+# target to build an object file
+zlib/gzstream.C.obj:
+	$(MAKE) -f CMakeFiles\HOGSMaker.dir\build.make CMakeFiles/HOGSMaker.dir/zlib/gzstream.C.obj
+.PHONY : zlib/gzstream.C.obj
+
+zlib/gzstream.i: zlib/gzstream.C.i
+
+.PHONY : zlib/gzstream.i
+
+# target to preprocess a source file
+zlib/gzstream.C.i:
+	$(MAKE) -f CMakeFiles\HOGSMaker.dir\build.make CMakeFiles/HOGSMaker.dir/zlib/gzstream.C.i
+.PHONY : zlib/gzstream.C.i
+
+zlib/gzstream.s: zlib/gzstream.C.s
+
+.PHONY : zlib/gzstream.s
+
+# target to generate assembly for a file
+zlib/gzstream.C.s:
+	$(MAKE) -f CMakeFiles\HOGSMaker.dir\build.make CMakeFiles/HOGSMaker.dir/zlib/gzstream.C.s
+.PHONY : zlib/gzstream.C.s
+
+zlib/gzwrite.obj: zlib/gzwrite.c.obj
+
+.PHONY : zlib/gzwrite.obj
+
+# target to build an object file
+zlib/gzwrite.c.obj:
+	$(MAKE) -f CMakeFiles\HOGSMaker.dir\build.make CMakeFiles/HOGSMaker.dir/zlib/gzwrite.c.obj
+.PHONY : zlib/gzwrite.c.obj
+
+zlib/gzwrite.i: zlib/gzwrite.c.i
+
+.PHONY : zlib/gzwrite.i
+
+# target to preprocess a source file
+zlib/gzwrite.c.i:
+	$(MAKE) -f CMakeFiles\HOGSMaker.dir\build.make CMakeFiles/HOGSMaker.dir/zlib/gzwrite.c.i
+.PHONY : zlib/gzwrite.c.i
+
+zlib/gzwrite.s: zlib/gzwrite.c.s
+
+.PHONY : zlib/gzwrite.s
+
+# target to generate assembly for a file
+zlib/gzwrite.c.s:
+	$(MAKE) -f CMakeFiles\HOGSMaker.dir\build.make CMakeFiles/HOGSMaker.dir/zlib/gzwrite.c.s
+.PHONY : zlib/gzwrite.c.s
+
+zlib/infback.obj: zlib/infback.c.obj
+
+.PHONY : zlib/infback.obj
+
+# target to build an object file
+zlib/infback.c.obj:
+	$(MAKE) -f CMakeFiles\HOGSMaker.dir\build.make CMakeFiles/HOGSMaker.dir/zlib/infback.c.obj
+.PHONY : zlib/infback.c.obj
+
+zlib/infback.i: zlib/infback.c.i
+
+.PHONY : zlib/infback.i
+
+# target to preprocess a source file
+zlib/infback.c.i:
+	$(MAKE) -f CMakeFiles\HOGSMaker.dir\build.make CMakeFiles/HOGSMaker.dir/zlib/infback.c.i
+.PHONY : zlib/infback.c.i
+
+zlib/infback.s: zlib/infback.c.s
+
+.PHONY : zlib/infback.s
+
+# target to generate assembly for a file
+zlib/infback.c.s:
+	$(MAKE) -f CMakeFiles\HOGSMaker.dir\build.make CMakeFiles/HOGSMaker.dir/zlib/infback.c.s
+.PHONY : zlib/infback.c.s
+
+zlib/inffast.obj: zlib/inffast.c.obj
+
+.PHONY : zlib/inffast.obj
+
+# target to build an object file
+zlib/inffast.c.obj:
+	$(MAKE) -f CMakeFiles\HOGSMaker.dir\build.make CMakeFiles/HOGSMaker.dir/zlib/inffast.c.obj
+.PHONY : zlib/inffast.c.obj
+
+zlib/inffast.i: zlib/inffast.c.i
+
+.PHONY : zlib/inffast.i
+
+# target to preprocess a source file
+zlib/inffast.c.i:
+	$(MAKE) -f CMakeFiles\HOGSMaker.dir\build.make CMakeFiles/HOGSMaker.dir/zlib/inffast.c.i
+.PHONY : zlib/inffast.c.i
+
+zlib/inffast.s: zlib/inffast.c.s
+
+.PHONY : zlib/inffast.s
+
+# target to generate assembly for a file
+zlib/inffast.c.s:
+	$(MAKE) -f CMakeFiles\HOGSMaker.dir\build.make CMakeFiles/HOGSMaker.dir/zlib/inffast.c.s
+.PHONY : zlib/inffast.c.s
+
+zlib/inflate.obj: zlib/inflate.c.obj
+
+.PHONY : zlib/inflate.obj
+
+# target to build an object file
+zlib/inflate.c.obj:
+	$(MAKE) -f CMakeFiles\HOGSMaker.dir\build.make CMakeFiles/HOGSMaker.dir/zlib/inflate.c.obj
+.PHONY : zlib/inflate.c.obj
+
+zlib/inflate.i: zlib/inflate.c.i
+
+.PHONY : zlib/inflate.i
+
+# target to preprocess a source file
+zlib/inflate.c.i:
+	$(MAKE) -f CMakeFiles\HOGSMaker.dir\build.make CMakeFiles/HOGSMaker.dir/zlib/inflate.c.i
+.PHONY : zlib/inflate.c.i
+
+zlib/inflate.s: zlib/inflate.c.s
+
+.PHONY : zlib/inflate.s
+
+# target to generate assembly for a file
+zlib/inflate.c.s:
+	$(MAKE) -f CMakeFiles\HOGSMaker.dir\build.make CMakeFiles/HOGSMaker.dir/zlib/inflate.c.s
+.PHONY : zlib/inflate.c.s
+
+zlib/inftrees.obj: zlib/inftrees.c.obj
+
+.PHONY : zlib/inftrees.obj
+
+# target to build an object file
+zlib/inftrees.c.obj:
+	$(MAKE) -f CMakeFiles\HOGSMaker.dir\build.make CMakeFiles/HOGSMaker.dir/zlib/inftrees.c.obj
+.PHONY : zlib/inftrees.c.obj
+
+zlib/inftrees.i: zlib/inftrees.c.i
+
+.PHONY : zlib/inftrees.i
+
+# target to preprocess a source file
+zlib/inftrees.c.i:
+	$(MAKE) -f CMakeFiles\HOGSMaker.dir\build.make CMakeFiles/HOGSMaker.dir/zlib/inftrees.c.i
+.PHONY : zlib/inftrees.c.i
+
+zlib/inftrees.s: zlib/inftrees.c.s
+
+.PHONY : zlib/inftrees.s
+
+# target to generate assembly for a file
+zlib/inftrees.c.s:
+	$(MAKE) -f CMakeFiles\HOGSMaker.dir\build.make CMakeFiles/HOGSMaker.dir/zlib/inftrees.c.s
+.PHONY : zlib/inftrees.c.s
+
+zlib/trees.obj: zlib/trees.c.obj
+
+.PHONY : zlib/trees.obj
+
+# target to build an object file
+zlib/trees.c.obj:
+	$(MAKE) -f CMakeFiles\HOGSMaker.dir\build.make CMakeFiles/HOGSMaker.dir/zlib/trees.c.obj
+.PHONY : zlib/trees.c.obj
+
+zlib/trees.i: zlib/trees.c.i
+
+.PHONY : zlib/trees.i
+
+# target to preprocess a source file
+zlib/trees.c.i:
+	$(MAKE) -f CMakeFiles\HOGSMaker.dir\build.make CMakeFiles/HOGSMaker.dir/zlib/trees.c.i
+.PHONY : zlib/trees.c.i
+
+zlib/trees.s: zlib/trees.c.s
+
+.PHONY : zlib/trees.s
+
+# target to generate assembly for a file
+zlib/trees.c.s:
+	$(MAKE) -f CMakeFiles\HOGSMaker.dir\build.make CMakeFiles/HOGSMaker.dir/zlib/trees.c.s
+.PHONY : zlib/trees.c.s
+
+zlib/uncompr.obj: zlib/uncompr.c.obj
+
+.PHONY : zlib/uncompr.obj
+
+# target to build an object file
+zlib/uncompr.c.obj:
+	$(MAKE) -f CMakeFiles\HOGSMaker.dir\build.make CMakeFiles/HOGSMaker.dir/zlib/uncompr.c.obj
+.PHONY : zlib/uncompr.c.obj
+
+zlib/uncompr.i: zlib/uncompr.c.i
+
+.PHONY : zlib/uncompr.i
+
+# target to preprocess a source file
+zlib/uncompr.c.i:
+	$(MAKE) -f CMakeFiles\HOGSMaker.dir\build.make CMakeFiles/HOGSMaker.dir/zlib/uncompr.c.i
+.PHONY : zlib/uncompr.c.i
+
+zlib/uncompr.s: zlib/uncompr.c.s
+
+.PHONY : zlib/uncompr.s
+
+# target to generate assembly for a file
+zlib/uncompr.c.s:
+	$(MAKE) -f CMakeFiles\HOGSMaker.dir\build.make CMakeFiles/HOGSMaker.dir/zlib/uncompr.c.s
+.PHONY : zlib/uncompr.c.s
+
+zlib/zutil.obj: zlib/zutil.c.obj
+
+.PHONY : zlib/zutil.obj
+
+# target to build an object file
+zlib/zutil.c.obj:
+	$(MAKE) -f CMakeFiles\HOGSMaker.dir\build.make CMakeFiles/HOGSMaker.dir/zlib/zutil.c.obj
+.PHONY : zlib/zutil.c.obj
+
+zlib/zutil.i: zlib/zutil.c.i
+
+.PHONY : zlib/zutil.i
+
+# target to preprocess a source file
+zlib/zutil.c.i:
+	$(MAKE) -f CMakeFiles\HOGSMaker.dir\build.make CMakeFiles/HOGSMaker.dir/zlib/zutil.c.i
+.PHONY : zlib/zutil.c.i
+
+zlib/zutil.s: zlib/zutil.c.s
+
+.PHONY : zlib/zutil.s
+
+# target to generate assembly for a file
+zlib/zutil.c.s:
+	$(MAKE) -f CMakeFiles\HOGSMaker.dir\build.make CMakeFiles/HOGSMaker.dir/zlib/zutil.c.s
+.PHONY : zlib/zutil.c.s
+
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -383,9 +869,15 @@ help:
 	@echo ... HOGSMaker.obj
 	@echo ... HOGSMaker.i
 	@echo ... HOGSMaker.s
+	@echo ... OMAParser.obj
+	@echo ... OMAParser.i
+	@echo ... OMAParser.s
 	@echo ... TreeSource/div/Timer.obj
 	@echo ... TreeSource/div/Timer.i
 	@echo ... TreeSource/div/Timer.s
+	@echo ... TreeSource/trees/genespeciestreeutil.obj
+	@echo ... TreeSource/trees/genespeciestreeutil.i
+	@echo ... TreeSource/trees/genespeciestreeutil.s
 	@echo ... TreeSource/trees/newicklex.obj
 	@echo ... TreeSource/trees/newicklex.i
 	@echo ... TreeSource/trees/newicklex.s
@@ -401,6 +893,54 @@ help:
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s
+	@echo ... zlib/adler32.obj
+	@echo ... zlib/adler32.i
+	@echo ... zlib/adler32.s
+	@echo ... zlib/compress.obj
+	@echo ... zlib/compress.i
+	@echo ... zlib/compress.s
+	@echo ... zlib/crc32.obj
+	@echo ... zlib/crc32.i
+	@echo ... zlib/crc32.s
+	@echo ... zlib/deflate.obj
+	@echo ... zlib/deflate.i
+	@echo ... zlib/deflate.s
+	@echo ... zlib/gzclose.obj
+	@echo ... zlib/gzclose.i
+	@echo ... zlib/gzclose.s
+	@echo ... zlib/gzlib.obj
+	@echo ... zlib/gzlib.i
+	@echo ... zlib/gzlib.s
+	@echo ... zlib/gzread.obj
+	@echo ... zlib/gzread.i
+	@echo ... zlib/gzread.s
+	@echo ... zlib/gzstream.obj
+	@echo ... zlib/gzstream.i
+	@echo ... zlib/gzstream.s
+	@echo ... zlib/gzwrite.obj
+	@echo ... zlib/gzwrite.i
+	@echo ... zlib/gzwrite.s
+	@echo ... zlib/infback.obj
+	@echo ... zlib/infback.i
+	@echo ... zlib/infback.s
+	@echo ... zlib/inffast.obj
+	@echo ... zlib/inffast.i
+	@echo ... zlib/inffast.s
+	@echo ... zlib/inflate.obj
+	@echo ... zlib/inflate.i
+	@echo ... zlib/inflate.s
+	@echo ... zlib/inftrees.obj
+	@echo ... zlib/inftrees.i
+	@echo ... zlib/inftrees.s
+	@echo ... zlib/trees.obj
+	@echo ... zlib/trees.i
+	@echo ... zlib/trees.s
+	@echo ... zlib/uncompr.obj
+	@echo ... zlib/uncompr.i
+	@echo ... zlib/uncompr.s
+	@echo ... zlib/zutil.obj
+	@echo ... zlib/zutil.i
+	@echo ... zlib/zutil.s
 .PHONY : help
 
 

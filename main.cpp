@@ -4,6 +4,7 @@
 
 #include "Graph.h"
 #include "CCExactSolver.h"
+#include "HOGSMaker.h"
 
 using namespace std;
 
@@ -13,6 +14,11 @@ void PrintPartition(vector<vector<int>> parts);
 
 int main(int argc, char *argv[])
 {
+    string omaDir = "W:\\Users\\Manuel\\Documents\\GitHub\\HOGSMaker\\HOGSMaker\\data_oma\\";
+    HOGSMaker hm;
+    hm.InferHOGS(omaDir);
+    return 0;
+
     //DoSomeUnitTests();   return 0;
     DoSomePerformanceTests();   return 0;
 
