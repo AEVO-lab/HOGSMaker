@@ -157,15 +157,19 @@ vector<vector<int> > Graph::GetConnectedComponents()
 
     while (visited.size() < GetNbVertices())
     {
+        cout<<"next to visit="<<next_to_visit<<endl;
         while (next_to_visit < GetNbVertices() && visited.find(next_to_visit) != visited.end())
             next_to_visit++;
 
+        if (next_to_visit >= GetNbVertices())
+            break;
 
         to_visit.push(next_to_visit);
         vector<int> cur_component;
         while (to_visit.size() > 0)
         {
             int nextguy = to_visit.front();
+            visited.insert(nextguy);
             to_visit.pop();
             cur_component.push_back(nextguy);
 
